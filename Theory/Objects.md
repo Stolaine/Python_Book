@@ -75,3 +75,40 @@
   - **Byet Arrays**
     - Represented by `bytearray`.
     - Created by `bytearray()` constructor.
+### Set Types
+- Unorderd, finite set of unique, immutable objects.
+- Can't be indexed.
+- Can be iterated.
+- `len()` function returns the number of items.
+- **Sets**
+  - Represented by `set`.
+  - Mutable.
+  - Created by `set()` constructor.
+- **Frozen Sets**
+  - Immutable.
+  - Created by `frozenset()` constructor.
+### Mappings
+- For a key stores a value.
+- `a[k]` gives the value stored for key `k` in the mapping `a`.
+- `len()` returns number of keys in a mapping.
+- **Dictionaries**
+  - Represented by `dict`.
+  - Keys can't be list, dictionaries and any other type of objects which are compared by value rather than identity.
+  - Mutable.
+  - Created by `{Key1 : value1, key2 : value2}` syntax.
+#### Callable Types
+- They can be called as functions.
+- **User-defined functions**
+  - Created when user creates a function definition.
+  - Special attributes **(2 underscores before and after)**
+    - doc: Function's documentaion string or None. Not inherited by subclasses. Writable.
+    - name: Function's Name. Writable.
+    - qualname: Function's qualified Name. Module.function_name. Writable.
+    - module: In which module function is defined. Writable.
+    - defaults: Default values of arguments if any else None. Writable.
+    - code: Code object representing the compiled functino body. Writable.
+    - globals: Dictionary that hold global variables. Read-only.
+    - dict: Function attributes. Writable.
+    - closure: None or tuple conatining bindings for free variables. Read-only.
+    - annotations: annotations of parameters. Writable
+    - kwdefaults: Keyword-only parameters dictionary. Writable.
