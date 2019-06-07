@@ -86,3 +86,33 @@ class ClassName:
 - Class variables are for attributes and methods shared by all instances of the class.
 - Instance variables are for data unique to each instance of the class.
 ## Random Remarks
+- Data attributes overrides the method attribures with the same name.
+- Data attributes can be accessed by methods as well as instance objects.
+- Instance objects can be used to create new data attributes.
+- To access data or method attributes in methods of a class We have to use reference to the class either class name of `self` variable.
+- `self` variable is just a convention it can be any word.
+- It is not necessary for function code to be inside the class definition.
+- Global names can be accessed without any reference.
+## Inheritence
+```
+class Derived(Base):
+	Statement-1
+	...
+	Statement-N
+```
+- Base class can be given also as `ModName.BaseClassName`.
+- An attribute can be searched in Base class if it is not found in the Derived class.
+- Derived class may override methods of their base classes.
+- All methods in Python are effectively virtual.
+- Method of base class can be called as `BaseClassName.MethodName(self, arguments)`.
+- **`isinstance(obj, ClassName)`** is `True` if `obj.\_\_class\_\_` is ClassName or some derived class of ClassName.
+- **`issubclass(ClassA, ClassB)`** is `True` if ClassA is derived from ClassB or some derived class of ClassB.
+### Multiple Inheritence
+- Mltiple classes can be provided as a comma separated list to derive from in class declaration statement.
+```
+class DerivedClassName(Base1, Base2, Base3):
+	statement-1
+	...
+	statement-N
+```
+- The search of attribute is depth-first i.e. first searched in Base1 and its parent classes recursively then Base2 and so on.
