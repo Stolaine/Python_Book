@@ -1,7 +1,8 @@
-# Objects
+# Data Model
+## Objects, Values and Types
 -	Every object has identity, type and value
--	Identity never changes, id() is used to get identity
--	type determines behaviour and state of the object, type() is used to get type
+-	Identity never changes, `id()` is used to get identity
+-	type determines behaviour and state of the object, `type()` is used to get type
 -	Object's type can't be changed, it can but not advised
 -	Depending on value changes or not objects can be of two types
 	-	Mutable - whose value can be changed
@@ -9,7 +10,7 @@
 	-	Mutability is determined by the type of object
 -	Objects can become unreachable but not destroyed they are garbage-collected
 
-## Containers
+### Containers
 - They contain links/references to other objects, e.g. tuples, lists, dictionaries.
 - An immutable container like tuple can have mutable objects like lists.
 - The id() of values of tuples will not chage but the value of values of tuple may change.
@@ -96,19 +97,3 @@
   - Keys can't be list, dictionaries and any other type of objects which are compared by value rather than identity.
   - Mutable.
   - Created by `{Key1 : value1, key2 : value2}` syntax.
-#### Callable Types
-- They can be called as functions.
-- **User-defined functions**
-  - Created when user creates a function definition.
-  - Special attributes **(2 underscores before and after)**
-    - doc: Function's documentaion string or None. Not inherited by subclasses. Writable.
-    - name: Function's Name. Writable.
-    - qualname: Function's qualified Name. Module.function_name. Writable.
-    - module: In which module function is defined. Writable.
-    - defaults: Default values of arguments if any else None. Writable.
-    - code: Code object representing the compiled functino body. Writable.
-    - globals: Dictionary that hold global variables. Read-only.
-    - dict: Function attributes. Writable.
-    - closure: None or tuple conatining bindings for free variables. Read-only.
-    - annotations: annotations of parameters. Writable
-    - kwdefaults: Keyword-only parameters dictionary. Writable.
