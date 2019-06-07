@@ -67,3 +67,22 @@ class ClassName:
 	- To instantiate a class instance to an initial state \_\_init\_\_() is defined in the class definition.
 	- It takes an argurment `self`(**compulsory**) and can take other arguments as well. In that case the other arguments must be passed at the time of Instantiation.
 ### Instance Objects
+> There are two kinds of attributes. One defined(functions) or initialized(data members) at the time of class definition and other using the **Attribute Reference** with instance objects.
+- **Data Attribute References**
+	- There is no need of declaring data attributes. Initialization takes care of that.
+	```
+	x = MyClass()
+	x.counter = 1
+	```
+- **Method References**
+	- A method is a function that 'belongs to' an object.
+	- There is a difference between `x.f` and `MyClass.f`. Former is Method object while latter is a function object.
+	- `x.f` is a method of `\_\_main\_\_.MyClass` instance while `MyClass.f` is a function in moudle \_\_main\_\_.
+### Method Objects
+- Method objects can be assigned to some variable like `xf = x.f`.
+- When method is called the instance variable is passed to the function to which it is referring. i.e. `x.f()` is equivalent to `MyClass.f(x)`.
+- When a non-data attribute is referenced which happens to be a function in class definition an abstract object is created with the function and the instance variable, and when the referenced attribute is called the referred function is called with instance variable as the first argument.
+### Class and Instance Variables
+- Class variables are for attributes and methods shared by all instances of the class.
+- Instance variables are for data unique to each instance of the class.
+## Random Remarks
