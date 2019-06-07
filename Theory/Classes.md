@@ -116,3 +116,32 @@ class DerivedClassName(Base1, Base2, Base3):
 	statement-N
 ```
 - The search of attribute is depth-first i.e. first searched in Base1 and its parent classes recursively then Base2 and so on.
+## Private Variables
+> There is no concept of private variables in python. But there is some conventions.
+- A name prefixed with an underscore \_ should be treated as a private member.
+### Various conventions for \_ and \_\_:
+- **Single Leading Underscore**
+	- It is by convention.
+	- It means that the attribute is private.
+	- But while importing using wildcard character(\*) these attributes will be ignored.
+- **Single Trailing Underscore**
+	- It is by convention.
+	- It is meant to distinguish between identifiers and keywords e.g. `class and class_`.
+- **Double Leading Underscore**
+	- It is a python syntax.
+	- For any variable having trailing underscore an additional className preceded by single underscore is added. i.e. for `__bar` inside class `Test` the new name will be `_Test__bar`.
+	- It is known as **name mangling**.
+	- It is done to prevent this method from being overridden.
+	- Name mangling is fully transparent to the programmer.
+	- Name mangling is done only if there is an attribute with double leading underscore inside a class context.
+	- Double underscore is oftenly called `dunder`.
+- **Double Leading and Trailing Underscore**
+	- It is a python syntax.
+	- Name mangling is not applied to identifiers having leading and trailing underscores.
+- **Single Underscore**
+	- It is by convention.
+	- It is to indicate that the variable is temporary or insignificant.
+	- In REPLs '\_' is used to store the value of last expression evaluated by the interpreter.
+## Iterator
+- An iterator is an object which has a function `\_\_next\_\_()` which return the item available just after the current one or `None` if the current item is the last one.
+- This object is created by using `iter()` function. It takes an iterable object as single argument.
